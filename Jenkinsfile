@@ -1,16 +1,23 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'node'
+    }
+
     stages {
-        stage('Start') {
+        stage('Clone') {
             steps {
-                echo 'Start building app'
+                git branch: 'develop',
+                credentialsId: 'gitea-jenkins',
+                url: 'http://x.x.x.x:3000/TestRepo'
             }
-        },
-        stage('Build') {
-                    steps {
-                        npm install
-                    }
-                }
+        }
+
+        stage('Install') {
+            steps {
+                npm install
+            }
+        }
     }
 }

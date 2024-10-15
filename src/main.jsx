@@ -56,6 +56,7 @@ const router = createBrowserRouter([
     },
 ]);
 
+// test push trigger
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />

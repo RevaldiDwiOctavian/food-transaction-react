@@ -37,7 +37,7 @@ export default function MainLayout(props) {
                         target="_blank"
                         className="hover:underline">Revaldi Dwi Octavian</a>.
                     </span>
-                    © 2023
+                    © 2024
                 </div>
             </footer>
         </Flowbite>
